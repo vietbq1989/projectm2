@@ -1,0 +1,75 @@
+<main id="maincontent" class="page-main"><a id="contentarea" tabindex="-1"></a>
+    <div class="page messages"><div data-placeholder="messages"></div><div data-bind="scope: 'messages'">
+            <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages"></div>
+            <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages"></div>
+        </div>
+
+    </div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="wgTXh7ymhOEMRlRT"><div id="authenticationPopup" data-bind="scope:'authenticationPopup'" style="display: none;">
+                <script>
+                    window.authenticationPopup = {"customerRegisterUrl":"http:\/\/dreamcode.xyz\/212\/customer\/account\/create\/","customerForgotPasswordUrl":"http:\/\/dreamcode.xyz\/212\/customer\/account\/forgotpassword\/","baseUrl":"http:\/\/dreamcode.xyz\/212\/"};
+                </script>
+            </div>
+            <div data-bind="scope:'webpos_cart_editpopup'" id="popup-edit-product" class="products wrapper grid products-grid">
+                <button data-bind="click: showProduct, i18n:'Show Product'">Show Product</button>
+                <ol class="products list items product-items" data-bind="visible: isShow">
+                    <!-- ko foreach: products -->
+                    <li class="item product product-item">
+                        <div class="product-item-info" data-container="product-grid">
+                            <a href="" class="product photo product-item-photo" tabindex="-1">
+                    <span class="product-image-container" style="width:240px;">
+                        <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                            <img class="product-image-photo" data-bind="attr: {src: 'http://dreamcode.xyz/212/pub/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582' + image}" width="240" height="300"></span>
+                    </span>
+                            </a>
+                            <div class="product details product-item-details">
+                                <strong class="product name product-item-name">
+                                    <a data-bind="text: name" class="product-item-link"></a>
+                                </strong>
+                                <div class="price-box price-final_price">
+                        <span class="price-container price-final_price tax weee">
+                            <span class="price-wrapper ">
+                                <span class="price" data-bind="text: price"></span>
+                            </span>
+                         </span>
+                                </div>
+                                <div class="product-item-inner">
+                                    <div class="product actions product-item-actions">
+                                        <div class="actions-primary">
+                                            <form data-role="tocart-form" action="" method="post" data-bind="attr: {action: additional.action}">
+                                                <input type="hidden" name="product" data-bind="attr: {value: additional.data.product}" value="" >
+                                                <input type="hidden" name="uenc" data-bind="attr: {value: additional.data.uenc}" value="">
+                                                <input type="hidden" name="uenc" data-bind="attr: {value: additional.data.uenc}" value="">
+                                                <input name="form_key" type="hidden" data-bind="attr: {value: additional.formkey}" value="">
+                                                <button type="submit" title="Add to Cart" class="action tocart primary">
+                                                    <span>Add to Cart</span>
+                                                </button>
+                                            </form>
+
+                                            <!-- <button title="Add to Cart" class="action tocart primary">
+                                                <span>Add To Cart</span>
+                                            </button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/ko-->
+                </ol><!-- /ko -->
+                <button data-bind="click: hideProduct, i18n:'Hide Product'">Hide Product</button>
+                <script type="text/x-magento-init">
+{
+"#popup-edit-product": {
+ "Magento_Ui/js/core/app": {
+        "components" : {
+           "webpos_cart_editpopup": {
+                "component": "Magestore_Student/js/testKo",
+                 "displayArea": "webpos_cart_editpopup"
+            }
+        }
+     }
+ }
+}
+   </script>
+            </div>
+        </div></div></main>

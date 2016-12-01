@@ -1,0 +1,146 @@
+<style type="text/css">
+    .scroll-grid {
+        height: 400px;
+        overflow-x: auto;
+    }
+    ul, li {
+        list-style: none !important;
+    }
+</style>
+
+<div class="ms-webpos">
+    <div id="o-wrapper" class="o-wrapper wrap-checkout-page">
+        <button id="c-button--push-left" class="c-button ui-btn ui-shadow ui-corner-all" style="display: inline-block;">
+            <span class="icon-iconPOS-menu"></span>
+        </button>
+        <div class="container-fluid">
+            <div class="row" id="containers_wrapper">
+            <div class="row" id="containers_wrapper">
+                <div id="block-product-list">
+                    <div class="col-sm-8 col-left" id="product-list-wrapper">
+                        <header class="o-header">
+                            <nav class="o-header-nav">
+                                <div class="form-inline" role="form">
+                                    <div class="form-group">
+                                        <span class="icon-iconPOS-search"></span>
+                                        <input type="search"
+                                               class="form-control search-header" id="search-header-product"
+                                               placeholder="Enter terms or scan barcodes to search">
+                                        <a id="remove-text-search-product" class="remove-text">
+                                            <span class="icon-iconPOS-delete"></span>
+                                        </a>
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Search
+                                    </button>
+                                </div>
+                            </nav>
+                            <div id="all-categories" class="collapse">
+                                <div id="list-cat-header" class="owl-carousel"></div>
+                            </div>
+                        </header><!-- /o-header -->
+                        <main class="main-content">
+                            <div id="block-product-list">
+                                <div class="grid-data">
+                                    <div class="wrap-list-product scroll-grid" style="">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <div class="item product-item">
+                                                        <div class="product-img">
+                                                            <a class="warning"
+                                                               title="Out of stock" style="display: none;"><span
+                                                                    class="icon-iconPOS-out-of-stock"></span></a>
+                                                            <img width="119" height="auto"
+                                                                 src="http://demo-magento2.magestore.com/webpos/pub/media/catalog/product/m/b/mb01-blue-0.jpg">
+                                                        </div>
+                                                        <div class="product-info">
+                                                            <h3 class="product-name">Joust Duffle Bag</h3>
+                                                            <div>
+                                                                <span class="final-price price">$32.00</span>
+                                                            </div>
+                                                            <span>Available qty: </span>
+                                                            <label>2</label>
+                                                        </div>
+                                                        <a data-target="#popup-product-details" data-toggle="modal"
+                                                           class="info" href="#"
+                                                           title="View product details">
+                                                            <span class="icon-iconPOS-detail">
+                                                                <span class="path1"></span>
+                                                                <span class="path2"></span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main><!-- /o-content -->
+                        <div class="col-sm-8 col-left wrap-list-product" id="product-list-overlay"
+                             style="opacity: 1; background-color: rgb(255, 255, 255); position: fixed; z-index: 99999; display: none;">
+                            <span class="product-loader"></span>
+                        </div>
+                        <footer class="list-product-footer">
+                            <div class="wrap-footer">
+                                <div class="product-total-loading">
+                                    <label class="number-product" >1 product(s)</label>
+                                    <span style="display: none;"></span>
+                                </div>
+                                <div id="productPager">
+                                    <ul class="pagination-pos" style="margin-top: 0px">
+                                        <li style="float: left"><span class="icon-iconPOS-previous" aria-hidden="true"></span></li>
+                                        <li class="pager-list"><span class="pager">2</span></li>
+                                        <li style="float: left">
+                                            <span class="icon-iconPOS-next" aria-hidden="true"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <label class="custom-sale pos_modal_link" data-toggle="modal"
+                                       data-target="#popup-custom-sale">
+                                    <span class="icon-iconPOS-customer-sale"></span>
+                                    <span class="pos_modal_link">Custom sale</span>
+                                </label>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <div id="webpos_cart" class="col-sm-4 col-right">
+                    <header class="o-header">
+                        <nav class="o-header-nav">
+                            <button id="empty_cart" class="c-button"><span
+                                    class="icon-iconPOS-emptycart"></span></button>
+                            <label class="title title-cart title-header-page">Cart(0)</label>
+                        </nav>
+                        <div class="actions-customer">
+                            <a class="add-customer">
+                                <label class="title-header-page">Guest</label>
+                            </a>
+                        </div>
+                    </header>
+                    <div class="main-item-order">
+                        <ul class="order-checkout wrap-item-order"></ul>
+                        <div class="grand-total-footer">
+                            <div class="wrap-grand-total">
+                                <ul>
+                                    <li>
+                                        <div class="label subtotal">
+                                            <label>Subtotal</label>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price">$0.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="action-button">
+                                        <button class="button hold btn-cl-cfg-other">Save Cart</button>
+                                        <button class="button checkout btn-cl-cfg-active">Checkout</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
